@@ -190,5 +190,5 @@ Respuesta
 ## [Librerias - Gradle]
 ## [Base de datos - mysql]
 ## [JPA - Hibernate]
-# Autor ✒️
+# utor ✒️
 ## Oscar Eduardo Mayor Jaramillo
