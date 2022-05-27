@@ -180,8 +180,8 @@ PUT - http://localhost:8080/user/{id}
             "user": null
         }
     ],
-    "created": "created": "2022-05-26 20:29:54",
-    "modified": 2022-05-26 22:23:58",
+    "created": "2022-05-26 20:29:54",
+    "modified": "2022-05-26 22:23:58",
     "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1NzVjNmJkNi02YTE5LTRiM2UtYjk1OS03NTFiYTY1NzFjYTIifQ.LY3PxCNnf6EvONGfjjFin_5M1h4DsY7EfslMdlDGn5A",
     "active": true
 }
@@ -196,5 +196,5 @@ PUT - http://localhost:8080/user/{id}
 ## [Librerias - Gradle]
 ## [Base de datos - mysql]
 ## [JPA - Hibernate]
-# utor ✒️
+# Autor ✒️
 ## Oscar Eduardo Mayor Jaramillo
