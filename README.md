@@ -54,26 +54,26 @@ createUser/
 ├── README.md
 └── settings.gradle
 
-#Comenzando 🚀
+# Comenzando 🚀
   Para ejecutar el proyecto debemos seguir los siguientes pasos
 
-#Pre-requisitos 📋
+# Pre-requisitos 📋
   GRADLE GIT JAVA 8
 
-#Instalación 🔧
+# Instalación 🔧
   clonamos el proyecto en nuestro computador
 
-#git clone https://github.com/baemestrada-source/prueba-nisum.git
+# git clone https://github.com/oscarmayor0211/createUser.git
   Ya despues debemos colocarnos en la carpeta del proyecto
 
   gradle clean
   gradle build
   gradle bootRun
 
-#Como probar el proyecto 🔩
+# Como probar el proyecto 🔩
   Debemos primeramente con un herramienta de test como postman
 
-#POST - http://localhost:8080/user
+# POST - http://localhost:8080/user
   importante enviar el json segun las especificaciones ejemplo:
 
 {
@@ -99,13 +99,13 @@ createUser/
     "active": true
 }
 
-#Listado de usuarios ⌨️
+# Listado de usuarios ⌨️
   Ya despues de registrado el usuario pordemos ingresar n usuarios
 
-#GET - http://localhost:8080/
+# GET - http://localhost:8080/
   Con este endpoint podemos tener todos los usuarios creados ejemplo de resultado:
 
-#Respuesta:
+# Respuesta:
 {
         "id": "c167a63c-bd4d-4d8c-bb4b-14b5cf7c095b",
         "name": "Oscar Mayor",
@@ -129,7 +129,7 @@ createUser/
 Validacion de usuario 📦
 Podemos validar el usuario en el siguiente endpoint
 
-POST - http://localhost:8080/user/access
+# POST - http://localhost:8080/user/access
 Debemos ingresar el body del usuario que deseamos validar ejemplo
 
 {
@@ -180,15 +180,15 @@ Respuesta
     "active": true
 }
 
-#Se implemento SWAGGER  http://localhost:8080/swagger-ui/index.html#/
+# Se implemento SWAGGER  http://localhost:8080/swagger-ui/index.html#/
 
-#Construido con 🛠️
+# Construido con 🛠️
 
-##Se utilizo lo siguiente
+## Se utilizo lo siguiente
 
-##[Proyecto - Spring boot]
-##[Librerias - Gradle]
-##[Base de datos - mysql]
-##[JPA - Hibernate]
-#Autor ✒️
-##Oscar Eduardo Mayor Jaramillo
+## [Proyecto - Spring boot]
+## [Librerias - Gradle]
+## [Base de datos - mysql]
+## [JPA - Hibernate]
+# Autor ✒️
+## Oscar Eduardo Mayor Jaramillo
