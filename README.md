@@ -77,7 +77,7 @@ Creacion y validacion de usuarios
 
 # POST - http://localhost:8080/user
   importante enviar el json segun las especificaciones ejemplo:
-
+``` sh
 {
     "name": "Oscar Mayor", 
     "email": "oscarmayor0211@gmail.com", 
@@ -90,8 +90,9 @@ Creacion y validacion de usuarios
         } 
     ] 
 }
+```
   Lo que devolvera ejemplo:
-
+``` sh
 {
     "id": "c167a63c-bd4d-4d8c-bb4b-14b5cf7c095b",
     "created":"2022-05-26 22:10:55",
@@ -100,7 +101,7 @@ Creacion y validacion de usuarios
     "last_login": "2022-05-26 22:10:55",
     "active": true
 }
-
+```
 # Listado de usuarios ⌨️
   Ya despues de registrado el usuario pordemos ingresar n usuarios
 
@@ -108,6 +109,7 @@ Creacion y validacion de usuarios
   Con este endpoint podemos tener todos los usuarios creados ejemplo de resultado:
 
 # Respuesta:
+``` sh
 {
         "id": "c167a63c-bd4d-4d8c-bb4b-14b5cf7c095b",
         "name": "Oscar Mayor",
@@ -127,22 +129,23 @@ Creacion y validacion de usuarios
         u9GELqC_fvLGLUVW73Q",
         "active": true
     }
+  ```
 
 Validacion de usuario 📦
 Podemos validar el usuario en el siguiente endpoint
 
 # POST - http://localhost:8080/user/access
 Debemos ingresar el body del usuario que deseamos validar ejemplo
-
+``` sh
 {
     "email" :"oscarmayor0211@gmail.com",
     "password" :"@Gildardo29"
 }
-
+```
 Y nos devolvera como ejemplo:
 
 si no fuera valido
-
+``` sh
 {
     "mensaje": "Access Invalid"
 }
@@ -156,11 +159,12 @@ o si fuera valido algo como esto
     "last_login": "2022-05-26 22:19:24",
     "active": true
 }
-
+```
 # Para modificar 
 PUT - http://localhost:8080/user/{id}
 
-Respuesta
+# Respuesta
+``` sh
 {
     "id": "575c6bd6-6a19-4b3e-b959-751ba6571ca2",
     "name": "Oscar Eduardo Mayor",
@@ -181,7 +185,7 @@ Respuesta
     "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1NzVjNmJkNi02YTE5LTRiM2UtYjk1OS03NTFiYTY1NzFjYTIifQ.LY3PxCNnf6EvONGfjjFin_5M1h4DsY7EfslMdlDGn5A",
     "active": true
 }
-
+```
 # Se implemento SWAGGER  http://localhost:8080/swagger-ui/index.html#/
 
 # Construido con 🛠️
