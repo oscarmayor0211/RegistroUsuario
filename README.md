@@ -41,168 +41,154 @@ createUser/
 ├── src/main/resources/
 │   └── application.properties
 │
+├── src/test/java/
+│     └── com.nisum.service.impl
+│       ├── user
+│            └── userFaker.java
+│       └── UserServiceImplTest.java
+│
 ├── .gitignore
 ├── build.gradle
 ├── gradlew.bat
 ├── HELP.md
 ├── README.md
 └── settings.gradle
-Comenzando 🚀
-Para ejecutar el proyecto debemos seguir los siguientes pasos
 
-Pre-requisitos 📋
-GRADLE GIT JAVA 8
+#Comenzando 🚀
+  Para ejecutar el proyecto debemos seguir los siguientes pasos
 
-Instalación 🔧
-clonamos el proyecto en nuestro computador
+#Pre-requisitos 📋
+  GRADLE GIT JAVA 8
 
-git clone https://github.com/baemestrada-source/prueba-nisum.git
-Ya despues debemos colocarnos en la carpeta del proyecto
+#Instalación 🔧
+  clonamos el proyecto en nuestro computador
 
-mvn install
-Ejecutando el proyecto ⚙️
-Ya con las librerias descargadas de maven podemos ejecutar con la siguiente instruccion
+#git clone https://github.com/baemestrada-source/prueba-nisum.git
+  Ya despues debemos colocarnos en la carpeta del proyecto
 
-mvn spring-boot:run
-Como probar el proyecto 🔩
-Debemos primeramente con un herramienta de test como postman
+  gradle clean
+  gradle build
+  gradle bootRun
 
-POST - http://localhost:8080/api/usuarios
-importante enviar el json segun las especificaciones ejemplo:
+#Como probar el proyecto 🔩
+  Debemos primeramente con un herramienta de test como postman
+
+#POST - http://localhost:8080/user
+  importante enviar el json segun las especificaciones ejemplo:
 
 {
-"name": "Estrada",
-"email": "bestrada3@gmail.com",
-"password": "123",
-"phones": [
-{
-"number": "12345",
-"citycode": "Guate",
-"contrycode": "57"
+    "name": "Oscar Mayor", 
+    "email": "oscarmayor0211@gmail.com", 
+    "password": "@Gildardo29",
+    "phones": [ 
+        {
+            "number": "312435567",
+            "cityCode": "602",
+            "countryCode": "+57"
+        } 
+    ] 
 }
-]
-}
-Lo que devolvera ejemplo:
+  Lo que devolvera ejemplo:
 
 {
-"id": "9c148eb1-e960-42af-9237-e3904e296c84",
-"created": "2022-01-14T19:04:56.5026313",
-"modified": null,
-"last_login": "2022-01-14T19:04:56.5026313",
-"token": "$2a$10$KOftWrk8pv5yYBX3SctpT.Ql3Eg5YLwRxHLEKloPGlyPeWbcoo5aa",
-"isactive": true
+    "id": "c167a63c-bd4d-4d8c-bb4b-14b5cf7c095b",
+    "created":"2022-05-26 22:10:55",
+    "modified": null,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjMTY3YTYzYy1iZDRkLTRkOGMtYmI0Yi0xNGI1Y2Y3YzA5NWIifQ.4acftOWt73jR07NnGl4nyJVNu9GELqC_fvLGLUVW73Q",
+    "last_login": "2022-05-26 22:10:55",
+    "active": true
 }
-Listado de usuarios ⌨️
-Ya despues de registrado el usuario pordemos ingresar n usuarios
 
-GET - http://localhost:8080/api/usuarios
-Con este endpoint podemos tener todos los usuarios creados ejemplo de resultado:
+#Listado de usuarios ⌨️
+  Ya despues de registrado el usuario pordemos ingresar n usuarios
 
-Respuesta:
+#GET - http://localhost:8080/
+  Con este endpoint podemos tener todos los usuarios creados ejemplo de resultado:
 
-[
+#Respuesta:
 {
-"id": "9c148eb1-e960-42af-9237-e3904e296c84",
-"name": "Estrada",
-"email": "bestrada3@gmail.com",
-"password": "$2a$10$SrwiksFqy7zOy3bgMYYWKukh10KE75khgDKjJnrPxdxJ95KhMnSHO",
-"created": "2022-01-14T19:04:56.502631",
-"modified": null,
-"last_login": "2022-01-14T19:04:56.502631",
-"token": "$2a$10$KOftWrk8pv5yYBX3SctpT.Ql3Eg5YLwRxHLEKloPGlyPeWbcoo5aa",
-"isactive": true,
-"phones": [
-{
-"number": "12345",
-"cityCode": "Guate",
-"contryCode": "57"
-}
-]
-},
-{
-"id": "6c3747ec-626c-4ff2-badd-4463e6ce9f3a",
-"name": "Moreira",
-"email": "bestrada123@gmail.com",
-"password": "$2a$10$sD3n8urK0k6bN61do2NEHOkO5NnzU7d/xKZOn67CH9KcdjON1EkW2",
-"created": "2022-01-14T19:21:14.849913",
-"modified": null,
-"last_login": "2022-01-14T19:21:14.849913",
-"token": "$2a$10$Ozpv51gAfddg5GgYcqwC/emIGJ.Yn3s.GClm8tpBpQG1Lz87IGvFC",
-"isactive": true,
-"phones": [
-{
-"number": "12345",
-"cityCode": "Guate",
-"contryCode": "57"
-}
-]
-}
-]
+        "id": "c167a63c-bd4d-4d8c-bb4b-14b5cf7c095b",
+        "name": "Oscar Mayor",
+        "email": "oscarmayor0211@gmail.com",
+        "created":"2022-05-26 22:10:55",
+        "last_login": "2022-05-26 22:10:55",
+        "password": "@Gildardo29",
+       "phones": [ 
+        {
+            "number": "312435567",
+            "cityCode": "602",
+            "countryCode": "+57"
+        } 
+        ]
+        "modified": null, 
+        "accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjMTY3YTYzYy1iZDRkLTRkOGMtYmI0Yi0xNGI1Y2Y3YzA5NWIifQ.4acftOWt73jR07NnGl4nyJVN
+        u9GELqC_fvLGLUVW73Q",
+        "active": true
+    }
+
 Validacion de usuario 📦
 Podemos validar el usuario en el siguiente endpoint
 
-POST - http://localhost:8080/api/access
+POST - http://localhost:8080/user/access
 Debemos ingresar el body del usuario que deseamos validar ejemplo
 
 {
-"name": "Estrada",
-"email": "bestrada2@gmail.com",
-"password": "123",
-"phones": [
-{
-"number": "12345",
-"citycode": "Guate",
-"contrycode": "57"
+    "email" :"oscarmayor0211@gmail.com",
+    "password" :"@Gildardo29"
 }
-]
-}
+
 Y nos devolvera como ejemplo:
 
 si no fuera valido
 
 {
-"error": "Usuario y/o clave invalidos"
+    "mensaje": "Access Invalid"
 }
 o si fuera valido algo como esto
 
 {
-"id": "9c148eb1-e960-42af-9237-e3904e296c84",
-"created": "2022-01-14T19:04:56.502631",
-"modified": null,
-"last_login": "2022-01-14T19:04:56.502631",
-"token": "$2a$10$KOftWrk8pv5yYBX3SctpT.Ql3Eg5YLwRxHLEKloPGlyPeWbcoo5aa",
-"isactive": true
+    "id": "575c6bd6-6a19-4b3e-b959-751ba6571ca2",
+    "created": "2022-05-26 20:29:54",
+    "modified": null,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1NzVjNmJkNi02YTE5LTRiM2UtYjk1OS03NTFiYTY1NzFjYTIifQ.LY3PxCNnf6EvONGfjjFin_5M1h4DsY7EfslMdlDGn5A",
+    "last_login": "2022-05-26 22:19:24",
+    "active": true
 }
-Validacion de ID y TOKEN 📦
-Podemos validar el usuario y el token su relacion en el siguiente endpoint en donde debemos incluir el id de usuario que deseamos validar
 
-POST - http://localhost:8080/api/token?id=def697bb-f751-4b82-bd44-0f541156d47c
-Como variable header o de encabezado debemos colocar una con nombre token
+# Para modificar 
+PUT - http://localhost:8080/user/{id}
 
-key: token value: $2a$10$9HsZxpSWZICa5KP4ns5afON71Vpyj/mqc8BF3cY8WIQqchBB30k9W
-Y nos devolvera como ejemplo:
-
-si no fuera valido
-
+Respuesta
 {
-"error": "No esta autorizado"
+    "id": "575c6bd6-6a19-4b3e-b959-751ba6571ca2",
+    "name": "Oscar Eduardo Mayor",
+    "email": "oscarmayor0211@gmail.com",
+    "last_login": "2022-05-26 22:19:24",
+    "password": "@MayorJaramillo02",
+    "phones": [
+        {
+            "id": 7,
+            "number": "3182747662",
+            "cityCode": "602",
+            "countryCode": "+57",
+            "user": null
+        }
+    ],
+    "created": "created": "2022-05-26 20:29:54",
+    "modified": 2022-05-26 22:23:58",
+    "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1NzVjNmJkNi02YTE5LTRiM2UtYjk1OS03NTFiYTY1NzFjYTIifQ.LY3PxCNnf6EvONGfjjFin_5M1h4DsY7EfslMdlDGn5A",
+    "active": true
 }
-o si fuera valido algo como esto
 
-{
-"id": "9c148eb1-e960-42af-9237-e3904e296c84",
-"created": "2022-01-14T19:04:56.502631",
-"modified": null,
-"last_login": "2022-01-14T19:04:56.502631",
-"token": "$2a$10$KOftWrk8pv5yYBX3SctpT.Ql3Eg5YLwRxHLEKloPGlyPeWbcoo5aa",
-"isactive": true
-}
-Construido con 🛠️
-Se utilizo lo siguiente
+#Se implemento SWAGGER  http://localhost:8080/swagger-ui/index.html#/
 
-[Proyecto - Spring boot]
-[Librerias - Maven]
-[Base de datos - H2]
-[JPA - Hibernate]
-Autor ✒️
-Byron Arturo Estrada Moreira - Prueba tecnica NISUM"# RegistroUsuario" 
+#Construido con 🛠️
+
+##Se utilizo lo siguiente
+
+##[Proyecto - Spring boot]
+##[Librerias - Gradle]
+##[Base de datos - mysql]
+##[JPA - Hibernate]
+#Autor ✒️
+##Oscar Eduardo Mayor Jaramillo
