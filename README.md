@@ -1,9 +1,10 @@
 # RegistroUsuario 
 Creacion y validacion de usuarios
 
-Diagrama de proyecto
+## Diagrama de proyecto
 
-createUser/
+# createUser/
+```sh
 │
 ├── src/main/java/
 │   └── com.nisum.createUser
@@ -53,7 +54,7 @@ createUser/
 ├── HELP.md
 ├── README.md
 └── settings.gradle
-
+```
 # Comenzando 🚀
   Para ejecutar el proyecto debemos seguir los siguientes pasos
 
@@ -65,10 +66,11 @@ createUser/
 
 # git clone https://github.com/oscarmayor0211/createUser.git
   Ya despues debemos colocarnos en la carpeta del proyecto
-
+``` sh
   gradle clean
   gradle build
   gradle bootRun
+```
 
 # Como probar el proyecto 🔩
   Debemos primeramente con un herramienta de test como postman
